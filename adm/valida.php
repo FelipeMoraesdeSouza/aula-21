@@ -13,12 +13,13 @@
 		
 		//Encontrando um usuário na tabela usuario com os mesmos dados digitado pelo usuario
 		if(isset($resultado)){
-			$_SESSION['usuarioId']      = $resultado['id'];
+			$_SESSION['usuarioId']      = $resultado['idusuario'];
 			$_SESSION['usuarioNome']    = $resultado['nome'];
 			$_SESSION['idnivelacesso']  = $resultado['idnivelacesso'];
 			$_SESSION['usuarioEmail']   = $resultado['email'];
 			
-            
+           
+		
             if($_SESSION['idnivelacesso'] == "1"){
 				header("Location: administrativo.php");
 			}elseif($_SESSION['idnivelacesso'] == "2"){
